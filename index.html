@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prototype-cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<main class="wrapper">
+    <section class="page">
+        <h1 class="page__title">Ты сегодня покормил кота?</h1>
+        <div class="page__wrapper">
+            <article class="page__item">
+                <input type="checkbox" id="product1" class="page__input" hidden>
+                <div class="page__item-wrapper">
+                    <div class="page__label">    
+                        <div class="page__text-wrapper">
+                            <div class="page__description">Сказочное заморское яство</div>
+                            <h2 class="page__name">Нямушка</h2>
+                            <span class="page__taste">с фуа-гра</span>
+                            <ul class="page__advantages">
+                                <li class="page__advantage"><b>10 </b>порций</li>
+                                <li class="page__advantage">мышь в подарок</li>
+                            </ul>
+                        </div>
+                        <div class="page__weight">
+                                <div class="page__weight-numeral">0,5</div>
+                                <span class="page__weight-measure">кг</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__item-caption" hidden>Печень утки разварная с артишоками.</div>
+                <div class="page__item-description">Чего сидишь? порадуй котэ, <label for="product1" class="action">купи.</label></div>
+            </article>
+            <article class="page__item">
+                <input type="checkbox" id="product2" class="page__input" hidden>
+                <div class="page__item-wrapper">
+                    <div class="page__label">
+                    <div class="page__text-wrapper">
+                        <div class="page__description">Сказочное заморское яство</div>
+                        <h2 class="page__name">Нямушка</h2>
+                        <span class="page__taste">с рыбой</span>
+                        <ul class="page__advantages">
+                            <li class="page__advantage"><b>40 </b>порций</li>
+                            <li class="page__advantage"><b>2 </b>мыши в подарок</li>
+                        </ul>
+                    </div>
+                    <div class="page__weight">
+                            <div class="page__weight-numeral">2</div>
+                            <span class="page__weight-measure">кг</span>
+                    </div>
+                </div>
+                </div>
+                <div class="page__item-caption" hidden>Головы щучьи с чесноком да свежайшая сёмгушка.</div>
+                <div class="page__item-description">Чего сидишь? порадуй котэ, <label for="product2" class="action">купи.</label></div>
+            </article>
+            <article class="page__item" data-disabled="Печалька, с курой закончился">
+                <input type="checkbox" id="product3" class="page__input" disabled hidden>
+                <div class="page__item-wrapper">
+                        <div class="page__label">
+                        
+                    <div class="page__text-wrapper">
+                        <div class="page__description">Сказочное заморское яство</div>
+                        <h2 class="page__name">Нямушка</h2>
+                        <span class="page__taste">с курой</span>
+                        <ul class="page__advantages">
+                            <li class="page__advantage"><b>100 </b>порций</li>
+                            <li class="page__advantage"><b>5 </b>мышей в подарок</li>
+                            <li class="page__advantage">заказчик доволен</li>
+                        </ul>
+                    </div>
+                    <div class="page__weight">
+                            <div class="page__weight-numeral">5</div>
+                            <span class="page__weight-measure">кг</span>
+                    </div>
+                </div>
+                </div>
+                <div class="page__item-caption" hidden>Филе из цыплят с трюфелями в бульоне.</div>
+                <div class="page__item-description">Чего сидишь? порадуй котэ, <label for="product3" class="action">купи.</label></div>
+            </article>
+        </div>
+    </section>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>

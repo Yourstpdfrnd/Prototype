@@ -1,0 +1,236 @@
+.page {
+    width: 100%;
+    max-width: 1120px;
+}
+
+.page__wrapper {
+    margin: 0 auto;
+    color: $white;
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: space-around;
+}
+
+
+.page__item:last-child {
+    margin-right: 0;
+}
+.page__item-wrapper {
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    width: 320px;
+    height: 480px;
+}
+
+.page__item-wrapper:hover .page__weight {
+    background-color: $cyan-hover;
+}
+
+.page__item-wrapper:before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transform: scale(1.02,1.015);
+    background-image: linear-gradient(135deg,transparent 5%,$cyan 0);
+    border-radius: 0 10px 10px 10px;
+    transition: 0.2s;
+}
+.page__item-wrapper:hover:before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transform: scale(1.02,1.015);
+    background-image: linear-gradient(135deg,transparent 5%,$cyan-hover 0);
+    border-radius: 0 10px 10px 10px;
+    transition: 0.2s;
+}
+
+.page__description {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    display: block;
+    height: 24px;
+}
+
+.page__text-wrapper {
+    position: relative;
+    z-index: 3;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1;
+}
+
+.page__label:before {
+    display: none;
+    content: 'Котэ не одобряет?';
+    font-size: 16px;
+    color: #e62e7a;
+    box-sizing: border-box;
+    transition: 0.2s;
+    z-index: 200;
+    height: 24px;
+}
+
+.selected-hover:hover .page__label:before {
+    display: block;
+}
+
+.selected-hover:hover .page__description {
+    display: none;
+}
+
+
+.page__name {
+    font-size: 48px;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.page__taste {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.page__advantages {
+    margin-top: 26px;
+    color: $gray;
+    font-weight: 200;
+    font-size: 14px;
+    user-select: none;
+    b {
+        font-weight: 600;
+    }
+}
+.page__weight {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   background-color: $cyan;
+   color: $white;
+   border-radius: 50%;
+   width: 5rem;
+   height: 5rem;
+   flex-direction: column;
+   z-index: 3;
+   bottom: 4%;
+   right: 4%;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   line-height: 1;
+   transition: 0.2s;
+}
+.page__item-image {
+    position: absolute;
+    z-index: 2;
+    bottom: 2%;
+    left: -8%;
+    width: 100%;
+    -webkit-clip-path: inset(0 0 0% 10% round 3px);
+    clip-path: inset(0 0 0 10% round 3px);
+}
+
+.page__weight-numeral {
+    font-size: 42px;
+}
+
+.page__item-description, .page__item-caption {
+    text-align: center;
+    color: $white;
+    margin-top: 1rem;
+    margin-bottom: 40px;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+}
+
+.page__label {
+    position: relative;
+    padding: 24px 48px 48px;
+    display: block;
+    width: 320px;
+    height: 480px;
+    font-family: Trebuchet MS;
+    color: #000;
+    background-image: url(../images/cat.png),linear-gradient(135deg,transparent 5%,$white 0);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    border-radius: 0 10px 10px 10px;
+    z-index: 3;
+    color: $black;
+    cursor: pointer;
+}
+
+
+.page_item--selected:hover {
+    .page__item-wrapper:before {
+        background-image: linear-gradient(135deg,transparent 5%, $magenta-hover 0);
+    }
+}
+.page__label--selected:hover {
+    .page__weight {
+        background-color: $magenta-hover;
+    }
+ }
+
+ .page_item--selected{
+    .page__item-wrapper:before {
+        background-image: linear-gradient(135deg,transparent 5%,$magenta 0);
+    }
+}
+.page__label--selected{
+    .page__weight {
+        background-color: $magenta;
+    }
+ }
+
+.action {
+    cursor: pointer;
+}
+
+.page__label--disabled {
+    cursor: default;
+    color: $disabled;
+    background-image: linear-gradient(135deg,transparent 5%,hsla(0, 0%, 100%, 0.5) 0),url(../images/cat.png),linear-gradient(135deg,transparent 5%,$white 0);
+    .page__advantages {
+        color: $disabled;
+        user-select: none;
+    }
+    .page__weight {
+        background-color: $disabled;
+    }
+}
+.page__label--disabled:hover {
+    cursor: default;
+    color: $disabled;
+    background-image: linear-gradient(135deg,transparent 5%,hsla(0, 0%, 100%, 0.5) 0),url(../images/cat.png),linear-gradient(135deg,transparent 5%,$white 0);
+    .page__advantages {
+        color: $disabled;
+        user-select: none;
+    }
+    .page__weight {
+        background-color: $disabled;
+    }
+}
+
+.page_item--disabled {
+    .page__item-wrapper:before {
+        background-image: linear-gradient(135deg,transparent 5%,$disabled 0);
+    }
+    .page__item-description {
+        color: #ffff66;
+    }
+}
